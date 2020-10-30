@@ -137,7 +137,7 @@ projected Cartesian coordinates.
 
 .. code-block:: default
 
-    grid = spline.grid(spacing=spacing * 111e3, data_names=["bathymetry"])
+    grid = spline.grid(spacing=spacing * 111e3, data_names="bathymetry")
     print("Cartesian grid:")
     print(grid)
 
@@ -223,7 +223,7 @@ coordinate system other than the one you used to fit the spline.
         spacing=spacing,
         projection=projection,
         dims=["latitude", "longitude"],
-        data_names=["bathymetry"],
+        data_names="bathymetry",
     )
     print("Geographic grid:")
     print(grid_geo)
@@ -304,10 +304,8 @@ Now we can use the Cartopy library to plot our geographic grid.
 
  .. code-block:: none
 
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
+    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/verde/datasets/sample_data.py:128: UserWarning: All kwargs are being ignored. They are accepted to guarantee backward compatibility.
+      + "guarantee backward compatibility."
 
 
 
@@ -408,10 +406,8 @@ Plot the profile location on our geographic grid from above.
 
  .. code-block:: none
 
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
+    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/verde/datasets/sample_data.py:128: UserWarning: All kwargs are being ignored. They are accepted to guarantee backward compatibility.
+      + "guarantee backward compatibility."
 
 
 
@@ -446,7 +442,7 @@ And finally plot the profile.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.899 seconds)
+   **Total running time of the script:** ( 0 minutes  3.752 seconds)
 
 
 .. _sphx_glr_download_tutorials_projections.py:

@@ -47,7 +47,6 @@ along the tracks than between tracks:
     # Plot the bathymetry data locations as black dots
     plt.plot(data.longitude, data.latitude, ".k", markersize=1, transform=crs)
     vd.datasets.setup_baja_bathymetry_map(ax)
-    plt.tight_layout()
     plt.show()
 
 
@@ -57,19 +56,6 @@ along the tracks than between tracks:
     :alt: Locations of bathymetry measurements from Baja California
     :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/tutorials/decimation.py:27: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
 
 
 
@@ -115,7 +101,7 @@ smoothly (like gravity and magnetic data), a mean would be a better option.
 
  .. code-block:: none
 
-    BlockReduce(reduction=<function median at 0x7fe27a171b70>,
+    BlockReduce(reduction=<function median at 0x7f10090f5510>,
                 spacing=0.08333333333333333)
 
 
@@ -136,7 +122,6 @@ Use the :meth:`~verde.BlockReduce.filter` method to apply the reduction:
     # Plot the bathymetry data locations as black dots
     plt.plot(*coordinates, ".k", markersize=1, transform=crs)
     vd.datasets.setup_baja_bathymetry_map(ax)
-    plt.tight_layout()
     plt.show()
 
 
@@ -147,19 +132,6 @@ Use the :meth:`~verde.BlockReduce.filter` method to apply the reduction:
     :alt: Locations of decimated data
     :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/tutorials/decimation.py:60: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
 
 
 
@@ -185,7 +157,6 @@ block:
     # Plot the bathymetry data locations as black dots
     plt.plot(*coordinates_center, ".k", markersize=1, transform=crs)
     vd.datasets.setup_baja_bathymetry_map(ax)
-    plt.tight_layout()
     plt.show()
 
 
@@ -196,19 +167,6 @@ block:
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/tutorials/decimation.py:82: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
-
 
 
 
@@ -217,7 +175,7 @@ Now the data are ready for interpolation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.069 seconds)
+   **Total running time of the script:** ( 0 minutes  1.043 seconds)
 
 
 .. _sphx_glr_download_tutorials_decimation.py:

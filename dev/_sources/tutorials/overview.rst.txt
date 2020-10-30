@@ -183,6 +183,15 @@ can use the spline to predict values anywhere:
     :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    /home/travis/build/fatiando/verde/tutorials/overview.py:96: MatplotlibDeprecationWarning: shading='flat' when X and Y have the same dimensions as C is deprecated since 3.3.  Either specify the corners of the quadrilaterals with X and Y, or pass shading='auto', 'nearest' or 'gouraud', or set rcParams['pcolor.shading'].  This will become an error two minor releases later.
+      plt.pcolormesh(grid_coords[0], grid_coords[1], gridded_scalars, cmap="RdBu_r")
+
 
 
 
@@ -207,7 +216,7 @@ determination <https://en.wikipedia.org/wiki/Coefficient_of_determination>`__.
 
  .. code-block:: none
 
-    0.9950450871662229
+    0.9950450871662521
 
 
 
@@ -257,7 +266,7 @@ setting the ``dims`` and ``data_names`` arguments.
 .. code-block:: default
 
 
-    grid = spline.grid(spacing=30, dims=["latitude", "longitude"], data_names=["gravity"])
+    grid = spline.grid(spacing=30, dims=["latitude", "longitude"], data_names="gravity")
     print(grid)
 
     plt.figure()
@@ -346,7 +355,7 @@ documentation will involve some variation of the following workflow:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.712 seconds)
+   **Total running time of the script:** ( 0 minutes  1.611 seconds)
 
 
 .. _sphx_glr_download_tutorials_overview.py:

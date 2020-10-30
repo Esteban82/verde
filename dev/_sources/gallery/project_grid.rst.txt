@@ -110,7 +110,7 @@ Stereographic, revealing the checkered pattern of the data.
         region=region,
         spacing=spacing,
         projection=projection,
-        data_names=["checkerboard"],
+        data_names="checkerboard",
         dims=("latitude", "longitude"),
     )
     print("Geographic grid:")
@@ -139,7 +139,7 @@ Stereographic, revealing the checkered pattern of the data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.896 seconds)
+   **Total running time of the script:** ( 0 minutes  1.032 seconds)
 
 
 .. _sphx_glr_download_gallery_project_grid.py:

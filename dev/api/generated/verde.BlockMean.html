@@ -301,9 +301,9 @@ during prediction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>shape</strong> (<em>tuple =</em><em> (</em><em>n_north</em><em>, </em><em>n_east</em><em>) or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – The number of blocks in the South-North and West-East directions,
+<li><p><strong>shape</strong> (<em>tuple =</em><em> (</em><em>n_north</em><em>, </em><em>n_east</em><em>) or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – The number of blocks in the South-North and West-East directions,
 respectively.</p></li>
-<li><p><strong>spacing</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>, </em><em>tuple =</em><em> (</em><em>s_north</em><em>, </em><em>s_east</em><em>)</em><em>, or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – The block size in the South-North and West-East directions,
+<li><p><strong>spacing</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>tuple =</em><em> (</em><em>s_north</em><em>, </em><em>s_east</em><em>)</em><em>, or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – The block size in the South-North and West-East directions,
 respectively. A single value means that the size is equal in both
 directions.</p></li>
 <li><p><strong>region</strong> (<em>list =</em><em> [</em><em>W</em><em>, </em><em>E</em><em>, </em><em>S</em><em>, </em><em>N</em><em>]</em>) – The boundaries of a given region in Cartesian or geographic
@@ -311,13 +311,13 @@ coordinates.</p></li>
 <li><p><strong>adjust</strong> (<em>{'spacing'</em><em>, </em><em>'region'}</em>) – Whether to adjust the spacing or the region if required. Ignored if
 <em>shape</em> is given instead of <em>spacing</em>. Defaults to adjusting the
 spacing.</p></li>
-<li><p><strong>center_coordinates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – If True, then the returned coordinates correspond to the center of each
+<li><p><strong>center_coordinates</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If True, then the returned coordinates correspond to the center of each
 block. Otherwise, the coordinates are calculated by applying the same
 reduction operation to the input coordinates.</p></li>
-<li><p><strong>drop_coords</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – If True, only the reduced <code class="docutils literal notranslate"><span class="pre">easting</span></code> and <code class="docutils literal notranslate"><span class="pre">northing</span></code> coordinates are
+<li><p><strong>drop_coords</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If True, only the reduced <code class="docutils literal notranslate"><span class="pre">easting</span></code> and <code class="docutils literal notranslate"><span class="pre">northing</span></code> coordinates are
 returned, dropping any other ones. If False, all coordinates are
 reduced and returned. Default True.</p></li>
-<li><p><strong>uncertainty</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – If True, the blocked weights will be calculated by uncertainty
+<li><p><strong>uncertainty</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If True, the blocked weights will be calculated by uncertainty
 propagation of the data uncertainties. If this is case, then the input
 weights <strong>must be</strong> <code class="docutils literal notranslate"><span class="pre">1/uncertainty**2</span></code>. <strong>Do not normalize the
 input weights</strong>. If False, then the blocked weights will be calculated
@@ -375,7 +375,7 @@ data.</p></li>
 <li><p><strong>data</strong> (<em>array</em><em> or </em><em>tuple of arrays</em>) – The data values at each point. If you want to reduce more than one
 data component, pass in multiple arrays as elements of a tuple. All
 arrays must have the same shape.</p></li>
-<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a><em> or </em><em>array</em><em> or </em><em>tuple of arrays</em>) – If not None, then the weights assigned to each data point. If more
+<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em> or </em><em>array</em><em> or </em><em>tuple of arrays</em>) – If not None, then the weights assigned to each data point. If more
 than one data component is provided, you must provide a weights
 array for each data component (if not None). If calculating the
 output weights through uncertainty propagation, then <em>weights</em>
@@ -403,7 +403,7 @@ contain (<code class="docutils literal notranslate"><span class="pre">easting</s
 <dd><p>Get parameters for this estimator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>deep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
+<dd class="field-odd"><p><strong>deep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>default=True</em>) – If True, will return the parameters for this estimator and
 contained subobjects that are estimators.</p>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -422,7 +422,7 @@ contained subobjects that are estimators.</p>
 component of a nested object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>**params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a>) – Estimator parameters.</p>
+<dd class="field-odd"><p><strong>**params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a>) – Estimator parameters.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>self</strong> (<em>object</em>) – Estimator instance.</p>
@@ -481,7 +481,7 @@ component of a nested object.</p>
     <p>
         &copy; Copyright 2017-2020, The Verde Developers
       <span class="lastupdated">
-        Last updated on Jun 04, 2020.
+        Last updated on Oct 30, 2020.
       </span>
 
     </p>

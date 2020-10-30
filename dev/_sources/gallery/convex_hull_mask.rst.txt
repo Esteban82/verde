@@ -37,12 +37,8 @@ outside of the convex hull of the data points to NaN or some other value.
      [False False False ... False False False]
      [False False False ... False False False]
      [False False False ... False False False]]
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/examples/convex_hull_mask.py:50: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
+    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/verde/datasets/sample_data.py:128: UserWarning: All kwargs are being ignored. They are accepted to guarantee backward compatibility.
+      + "guarantee backward compatibility."
 
 
 
@@ -94,13 +90,12 @@ outside of the convex hull of the data points to NaN or some other value.
     ax.plot(data.longitude, data.latitude, ".y", markersize=0.5, transform=crs)
     ax.pcolormesh(*coordinates, dummy_data, transform=crs)
     vd.datasets.setup_baja_bathymetry_map(ax, land=None)
-    plt.tight_layout()
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.435 seconds)
+   **Total running time of the script:** ( 0 minutes  2.411 seconds)
 
 
 .. _sphx_glr_download_gallery_convex_hull_mask.py:

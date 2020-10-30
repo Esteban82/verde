@@ -47,12 +47,6 @@ but takes a set of parameter values instead of only one value. When calling
     Best spline configuration:
       mindist: 50000.0
       damping: 0.001
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/examples/spline_cv.py:79: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
 
 
 
@@ -105,7 +99,7 @@ but takes a set of parameter values instead of only one value. When calling
         spacing=spacing,
         projection=projection,
         dims=["latitude", "longitude"],
-        data_names=["temperature"],
+        data_names="temperature",
     )
     grid = vd.distance_mask(
         coordinates, maxdist=3 * spacing * 111e3, grid=grid_full, projection=projection
@@ -122,13 +116,12 @@ but takes a set of parameter values instead of only one value. When calling
     plt.colorbar(tmp).set_label("Air temperature (C)")
     # Use an utility function to add tick labels and land and ocean features to the map.
     vd.datasets.setup_texas_wind_map(ax, region=region)
-    plt.tight_layout()
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.647 seconds)
+   **Total running time of the script:** ( 0 minutes  0.824 seconds)
 
 
 .. _sphx_glr_download_gallery_spline_cv.py:

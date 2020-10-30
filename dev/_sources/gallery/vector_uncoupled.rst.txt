@@ -42,23 +42,13 @@ pipeline.
 
     [5 rows x 6 columns]
     Chain(steps=[('mean',
-                  BlockReduce(reduction=<function mean at 0x7fe27a324158>,
+                  BlockReduce(reduction=<function mean at 0x7f1009227a60>,
                               spacing=37000.0)),
                  ('trend', Vector(components=[Trend(degree=1), Trend(degree=1)])),
                  ('spline',
                   Vector(components=[Spline(damping=1e-10, mindist=500000.0),
                                      Spline(damping=1e-10, mindist=500000.0)]))])
     Cross-validation R^2 score: 0.78
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:1752: RuntimeWarning: invalid value encountered in less
-      u, v = self.projection.transform_vectors(t, x, y, u, v)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:1752: RuntimeWarning: invalid value encountered in greater
-      u, v = self.projection.transform_vectors(t, x, y, u, v)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/examples/vector_uncoupled.py:99: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
 
 
 
@@ -156,13 +146,12 @@ pipeline.
     ax.legend(loc="lower left")
     # Use an utility function to add tick labels and land and ocean features to the map.
     vd.datasets.setup_texas_wind_map(ax)
-    plt.tight_layout()
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.270 seconds)
+   **Total running time of the script:** ( 0 minutes  0.373 seconds)
 
 
 .. _sphx_glr_download_gallery_vector_uncoupled.py:

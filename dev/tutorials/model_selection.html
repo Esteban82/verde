@@ -277,7 +277,7 @@ parameters.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>R² with defaults: 0.7960368854849694
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>R² with defaults: 0.7960368854832034
 </pre></div>
 </div>
 <div class="section" id="tuning">
@@ -316,7 +316,7 @@ Combinations: [{&#39;damping&#39;: None, &#39;mindist&#39;: 5000.0}, {&#39;dampi
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[-6.672752084450996, 0.4845403172681578, 0.8383522700290031, 0.8371988991060888, 0.8351153077295754, 0.8316607509400296, 0.849262993117369, 0.8418400888505818, 0.8371795091862098, 0.8412200336661682, 0.8529555082414106, 0.8521727667594355, 0.8401945161937409, 0.8330182923876521, 0.8441706458561657, 0.849114559135252]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[-6.67275208441671, 0.48454031726769103, 0.8383522700289767, 0.8371988991061311, 0.8351153077203957, 0.8316607509540047, 0.8492629930794038, 0.841840088857753, 0.8371795091874137, 0.8412200336703355, 0.8529555082436957, 0.8521727667576258, 0.8401945161938101, 0.8330182923874727, 0.8441706458564197, 0.8491145591358883]
 </pre></div>
 </div>
 <p>The largest score will yield the best parameter combination.</p>
@@ -327,8 +327,8 @@ Combinations: [{&#39;damping&#39;: None, &#39;mindist&#39;: 5000.0}, {&#39;dampi
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Best score: 0.8529555082414106
-Score with defaults: 0.7960368854849694
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Best score: 0.8529555082436957
+Score with defaults: 0.7960368854832034
 Best parameters: {&#39;damping&#39;: 0.001, &#39;mindist&#39;: 50000.0}
 </pre></div>
 </div>
@@ -344,7 +344,10 @@ cross-validation and tuning automatically when fitting a dataset.</p>
 <a class="reference internal" href="../api/generated/verde.Spline.html#verde.Spline" title="verde.Spline"><code class="xref py py-class docutils literal notranslate"><span class="pre">verde.Spline</span></code></a>. It has almost the same interface but does all of the above
 automatically when fitting a dataset. The only difference is that you must provide a
 list of <code class="docutils literal notranslate"><span class="pre">damping</span></code> and <code class="docutils literal notranslate"><span class="pre">mindist</span></code> parameters to try instead of only a single value:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../api/generated/verde.SplineCV.html#verde.SplineCV" title="verde.SplineCV" class="sphx-glr-backref-module-verde sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spline</span></a> <span class="o">=</span> <a href="../api/generated/verde.SplineCV.html#verde.SplineCV" title="verde.SplineCV" class="sphx-glr-backref-module-verde sphx-glr-backref-type-py-class"><span class="n">vd</span><span class="o">.</span><span class="n">SplineCV</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dampings</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dampings</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mindists</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mindists</span></a><span class="p">,)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../api/generated/verde.SplineCV.html#verde.SplineCV" title="verde.SplineCV" class="sphx-glr-backref-module-verde sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spline</span></a> <span class="o">=</span> <a href="../api/generated/verde.SplineCV.html#verde.SplineCV" title="verde.SplineCV" class="sphx-glr-backref-module-verde sphx-glr-backref-type-py-class"><span class="n">vd</span><span class="o">.</span><span class="n">SplineCV</span></a><span class="p">(</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dampings</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dampings</span></a><span class="p">,</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mindists</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mindists</span></a><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>Calling <a class="reference internal" href="../api/generated/verde.SplineCV.html#verde.SplineCV.fit" title="verde.SplineCV.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit</span></code></a> will run a grid search over all parameter
@@ -365,7 +368,7 @@ scores, are stored in class attributes:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Highest score: 0.8529555082414106
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Highest score: 0.8529555082436957
 Best damping: 0.001
 Best mindist: 50000.0
 </pre></div>
@@ -377,7 +380,7 @@ Best mindist: 50000.0
     <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spacing</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spacing</span></a><span class="p">,</span>
     <span class="n">projection</span><span class="o">=</span><span class="n">projection</span><span class="p">,</span>
     <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">],</span>
-    <span class="n">data_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">],</span>
+    <span class="n">data_names</span><span class="o">=</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="http://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="xarray.Dataset" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a><span class="p">)</span>
 </pre></div>
@@ -421,10 +424,10 @@ intermediate values in the scheduled computations.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Delayed scores: [Delayed(&#39;mean-57c25983-8a7a-4432-aaf5-2764bd3644df&#39;), Delayed(&#39;mean-763a5ceb-4df0-4ec9-940f-6b062d9b8ce2&#39;), Delayed(&#39;mean-53be4b28-f2fd-414e-a3f9-07d30d706227&#39;), Delayed(&#39;mean-4436e8d6-8523-4160-9a30-32d10b03a2c2&#39;), Delayed(&#39;mean-1eb12e99-e9c3-4248-a10e-4d3ae68bab54&#39;), Delayed(&#39;mean-74700cf4-2f16-47ed-aea9-faf674196d16&#39;), Delayed(&#39;mean-023fc86d-75a2-46f0-8145-4e5098d2ce0f&#39;), Delayed(&#39;mean-6a8a2534-d44b-48c6-b72f-5ba18fc2c18d&#39;), Delayed(&#39;mean-8417c90b-e303-42db-a61c-92b260a3009f&#39;), Delayed(&#39;mean-ddf1b5a2-8735-4b86-967a-91af9ef2c426&#39;), Delayed(&#39;mean-30847aac-2db9-4976-a18e-c65814ac7581&#39;), Delayed(&#39;mean-04ce302d-9b80-4637-af07-fc015a6ff50d&#39;), Delayed(&#39;mean-bb355a53-7c8d-4b21-a512-1a142bb903d5&#39;), Delayed(&#39;mean-a9b2c5b2-0020-4960-9071-3dc7b231f081&#39;), Delayed(&#39;mean-1d7f6ddc-e1e3-48e9-adf8-55e17d0c3c12&#39;), Delayed(&#39;mean-1c87624b-d32f-48a3-bd05-41ad55cef63f&#39;)]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Delayed scores: [Delayed(&#39;mean-41ea57b8-a04e-452e-8984-5e479747c7a2&#39;), Delayed(&#39;mean-16a94383-d718-4fdf-ac0e-f3403c4f2de1&#39;), Delayed(&#39;mean-8063e89c-3e56-4c95-955c-99e30eaa1b69&#39;), Delayed(&#39;mean-13051fd0-83af-4fdc-8c95-65964738a47e&#39;), Delayed(&#39;mean-1e6add42-1275-42a4-b5b5-d9aa690a7930&#39;), Delayed(&#39;mean-993cfd56-d127-4ad4-a161-3089378c792a&#39;), Delayed(&#39;mean-14c79cf4-d30d-4d82-8c7b-21acb06f737e&#39;), Delayed(&#39;mean-07eaf953-0c17-4c9a-8dec-5dadf0faf731&#39;), Delayed(&#39;mean-2f361382-190a-41fd-9df1-68c121ad5f77&#39;), Delayed(&#39;mean-687bbeac-5b86-4b28-9ce9-c6f8849dfcbc&#39;), Delayed(&#39;mean-a92768ce-daa2-4b1c-956b-0c67565c7a49&#39;), Delayed(&#39;mean-b25f0a7b-ece0-41ec-a644-61269a0e573d&#39;), Delayed(&#39;mean-007cb1be-9c94-49f9-80fb-393ce4ff7e52&#39;), Delayed(&#39;mean-a6ead5fa-dd93-4835-801e-7f4694d0782a&#39;), Delayed(&#39;mean-eda573fb-030e-45b9-a9f4-fda3cffa7bda&#39;), Delayed(&#39;mean-bc5dce8d-47a9-469e-b2f2-696cd46169fc&#39;)]
 </pre></div>
 </div>
-<p>Calling <a class="reference external" href="https://docs.dask.org/en/latest/api.html#dask.compute" title="(in Dask v2.17.2)"><code class="xref py py-func docutils literal notranslate"><span class="pre">dask.compute</span></code></a> on the scores will calculate their values but
+<p>Calling <a class="reference external" href="https://docs.dask.org/en/latest/api.html#dask.compute" title="(in Dask)"><code class="xref py py-func docutils literal notranslate"><span class="pre">dask.compute</span></code></a> on the scores will calculate their values but
 will unfortunately run the entire grid search again. So using
 <code class="docutils literal notranslate"><span class="pre">delayed=True</span></code> is not recommended if you need the scores of each parameter
 combination.</p>
@@ -438,7 +441,7 @@ with the best configuration and see how it compares to the default result.</p>
     <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spacing</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spacing</span></a><span class="p">,</span>
     <span class="n">projection</span><span class="o">=</span><span class="n">projection</span><span class="p">,</span>
     <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">],</span>
-    <span class="n">data_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">],</span>
+    <span class="n">data_names</span><span class="o">=</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -457,7 +460,7 @@ with the best configuration and see how it compares to the default result.</p>
 <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">title</span></a><span class="p">,</span> <a href="http://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="xarray.Dataset" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grd</span></a> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="p">[</span><span class="s2">&quot;Defaults&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuned&quot;</span><span class="p">],</span> <span class="p">[</span><a href="http://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="xarray.Dataset" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid_default</span></a><span class="p">,</span> <a href="http://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="xarray.Dataset" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a><span class="p">]):</span>
     <a href="https://scitools.org.uk/cartopy/docs/latest/matplotlib/geoaxes.html#cartopy.mpl.geoaxes.GeoAxesSubplot" title="cartopy.mpl.geoaxes.GeoAxesSubplot" class="sphx-glr-backref-module-cartopy-mpl-geoaxes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><a href="https://scitools.org.uk/cartopy/docs/latest/crs/projections.html#cartopy.crs.Mercator" title="cartopy.crs.Mercator" class="sphx-glr-backref-module-cartopy-crs sphx-glr-backref-type-py-class"><span class="n">ccrs</span><span class="o">.</span><span class="n">Mercator</span></a><span class="p">())</span>
     <a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">title</span></a><span class="p">)</span>
-    <a href="https://matplotlib.org/api/collections_api.html#matplotlib.collections.QuadMesh" title="matplotlib.collections.QuadMesh" class="sphx-glr-backref-module-matplotlib-collections sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pc</span></a> <span class="o">=</span> <a href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.plot.html#xarray.DataArray.plot" title="xarray.DataArray.plot" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-method"><span class="n">grd</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span></a><span class="p">(</span>
+    <a href="https://matplotlib.org/api/collections_api.html#matplotlib.collections.QuadMesh" title="matplotlib.collections.QuadMesh" class="sphx-glr-backref-module-matplotlib-collections sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pc</span></a> <span class="o">=</span> <a href="http://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="xarray.Dataset" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grd</span></a><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
         <a href="https://scitools.org.uk/cartopy/docs/latest/matplotlib/geoaxes.html#cartopy.mpl.geoaxes.GeoAxesSubplot" title="cartopy.mpl.geoaxes.GeoAxesSubplot" class="sphx-glr-backref-module-cartopy-mpl-geoaxes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="o">=</span><a href="https://scitools.org.uk/cartopy/docs/latest/matplotlib/geoaxes.html#cartopy.mpl.geoaxes.GeoAxesSubplot" title="cartopy.mpl.geoaxes.GeoAxesSubplot" class="sphx-glr-backref-module-cartopy-mpl-geoaxes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">,</span>
         <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;plasma&quot;</span><span class="p">,</span>
         <span class="n">transform</span><span class="o">=</span><a href="https://scitools.org.uk/cartopy/docs/latest/crs/projections.html#cartopy.crs.PlateCarree" title="cartopy.crs.PlateCarree" class="sphx-glr-backref-module-cartopy-crs sphx-glr-backref-type-py-class"><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span></a><span class="p">(),</span>
@@ -471,28 +474,14 @@ with the best configuration and see how it compares to the default result.</p>
         <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.Series" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">longitude</span></a><span class="p">,</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.Series" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">latitude</span></a><span class="p">,</span> <span class="s2">&quot;.k&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><a href="https://scitools.org.uk/cartopy/docs/latest/crs/projections.html#cartopy.crs.PlateCarree" title="cartopy.crs.PlateCarree" class="sphx-glr-backref-module-cartopy-crs sphx-glr-backref-type-py-class"><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span></a><span class="p">()</span>
     <span class="p">)</span>
     <a href="../api/generated/verde.datasets.setup_texas_wind_map.html#verde.datasets.setup_texas_wind_map" title="verde.datasets.setup_texas_wind_map" class="sphx-glr-backref-module-verde-datasets sphx-glr-backref-type-py-function"><span class="n">vd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">setup_texas_wind_map</span></a><span class="p">(</span><a href="https://scitools.org.uk/cartopy/docs/latest/matplotlib/geoaxes.html#cartopy.mpl.geoaxes.GeoAxesSubplot" title="cartopy.mpl.geoaxes.GeoAxesSubplot" class="sphx-glr-backref-module-cartopy-mpl-geoaxes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">)</span>
-<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="Defaults, Tuned" class="sphx-glr-single-img" src="../_images/sphx_glr_model_selection_001.png" />
-<p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-  return super(GeoAxes, self).set_xticks(xticks, minor)
-/home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-  return super(GeoAxes, self).set_yticks(yticks, minor)
-/home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-  return super(GeoAxes, self).set_xticks(xticks, minor)
-/home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-  return super(GeoAxes, self).set_yticks(yticks, minor)
-/home/travis/build/fatiando/verde/tutorials/model_selection.py:208: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations.
-  plt.tight_layout()
-</pre></div>
-</div>
 <p>Notice that, for sparse data like these, <strong>smoother models tend to be better
 predictors</strong>. This is a sign that you should probably not trust many of the short
 wavelength features that we get from the defaults.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.278 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.137 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-model-selection-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/ca478a03d934b25a6d83ce3f68e77691/model_selection.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">model_selection.py</span></code></a></p>
@@ -527,7 +516,7 @@ wavelength features that we get from the defaults.</p>
     <p>
         &copy; Copyright 2017-2020, The Verde Developers
       <span class="lastupdated">
-        Last updated on Jun 04, 2020.
+        Last updated on Oct 30, 2020.
       </span>
 
     </p>

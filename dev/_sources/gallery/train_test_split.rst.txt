@@ -48,10 +48,6 @@ This example compares splitting our sample dataset using both methods.
 
     Train and test size for random splits: 66376 16594
     Train and test size for block splits:  66585 16385
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
 
 
 
@@ -87,7 +83,11 @@ This example compares splitting our sample dataset using both methods.
     # blocks randomly. To do this, specify the size of the blocks using the
     # 'spacing' argument.
     train_block, test_block = vd.train_test_split(
-        coordinates, values, spacing=10 / 60, test_size=test_size, random_state=213,
+        coordinates,
+        values,
+        spacing=10 / 60,
+        test_size=test_size,
+        random_state=213,
     )
     # Verde will automatically attempt to balance the data between the splits so
     # that the desired amount is assigned to the test set. It won't be exact since
@@ -127,7 +127,7 @@ This example compares splitting our sample dataset using both methods.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.344 seconds)
+   **Total running time of the script:** ( 0 minutes  1.273 seconds)
 
 
 .. _sphx_glr_download_gallery_train_test_split.py:

@@ -101,7 +101,6 @@ uncertainties look like. We'll make a function for this so we can reuse it later
         )
         plt.colorbar(pc, ax=ax, orientation="horizontal", pad=0.05)
         vd.datasets.setup_california_gps_map(ax)
-        plt.tight_layout()
         plt.show()
 
 
@@ -121,19 +120,6 @@ uncertainties look like. We'll make a function for this so we can reuse it later
     :alt: Vertical GPS velocity, Uncertainty (m/yr)
     :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/tutorials/weights.py:56: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
 
 
 
@@ -388,7 +374,7 @@ point forces. Here, we'll apply a bit of damping.
         spacing=spacing,
         projection=projection,
         dims=["latitude", "longitude"],
-        data_names=["velocity"],
+        data_names="velocity",
     )
     # Avoid showing interpolation outside of the convex hull of the data points.
     grid = vd.convexhull_mask(coordinates, grid=grid, projection=projection)
@@ -416,7 +402,7 @@ Calculate an unweighted spline as well for comparison.
         spacing=spacing,
         projection=projection,
         dims=["latitude", "longitude"],
-        data_names=["velocity"],
+        data_names="velocity",
     )
     grid_unweighted = vd.convexhull_mask(
         coordinates, grid=grid_unweighted, projection=projection
@@ -469,7 +455,6 @@ Finally, plot the weighted and unweighted grids side by side.
     ax.plot(data.longitude, data.latitude, ".k", markersize=0.1, transform=crs)
     ax.coastlines()
     vd.datasets.setup_california_gps_map(ax)
-    plt.tight_layout()
     plt.show()
 
 
@@ -479,30 +464,13 @@ Finally, plot the weighted and unweighted grids side by side.
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:782: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_xticks(xticks, minor)
-    /home/travis/miniconda/envs/testing/lib/python3.6/site-packages/cartopy/mpl/geoaxes.py:829: MatplotlibDeprecationWarning: Passing the minor parameter of set_yticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
-      return super(GeoAxes, self).set_yticks(yticks, minor)
-    /home/travis/build/fatiando/verde/tutorials/weights.py:308: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
-      plt.tight_layout()
-
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.752 seconds)
+   **Total running time of the script:** ( 0 minutes  4.094 seconds)
 
 
 .. _sphx_glr_download_tutorials_weights.py:
